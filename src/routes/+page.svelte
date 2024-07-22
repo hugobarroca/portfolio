@@ -11,12 +11,19 @@
 	</div>
 	<div class="container">
 		<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-			<path d="M0,70 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill:#333;"></path>
+			<!-- xmlns="http://www.w3.org/2000/svg"
+            style="transform:translate(0, 0px); opacity:1"
+            fill="url(#sw-gradient-0)" -->
+			<path d="M0,0 C150,120 350,-30 500,20 L500,00 L0,0 Z"></path>
 		</svg>
 	</div>
 </main>
 
 <style>
+	path {
+		stroke: none;
+		fill: #333;
+	}
 	/* Global styles specific to this page */
 	h1 {
 		display: flex;
