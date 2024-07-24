@@ -3,7 +3,11 @@
 		<div id="intro-text">
 			<h2>Hey!</h2>
 			<h1>I'm Hugo Barroca</h1>
-			<h3>&lt;Software Developer /&gt;</h3>
+			<div id="fake-code-container">
+				<span class="cursor">
+					<h3>&lt;Software Developer /&gt;</h3>
+				</span>
+			</div>
 		</div>
 		<div id="pf-section">
 			<img id="profile-picture" height="600vh" src="public/static/Me.jpeg" alt="Me" />
@@ -20,11 +24,57 @@
 </main>
 
 <style>
+	#main-content {
+		background-color: #333;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+		padding-top: 50px;
+	}
+
+	#fake-code-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+
+	#profile-picture {
+		border-radius: 50%;
+	}
+
+	.cursor {
+		padding: 0 50px 0 10px;
+		border-radius: 10px;
+	}
+
+	@keyframes cursor-blink {
+		0% {
+			opacity: 0;
+		}
+	}
+
+	.cursor h3::after {
+		content: '';
+		width: 5px;
+		height: 45px;
+		background: #f7f7f7;
+		display: inline-block;
+		animation: cursor-blink 1.5s steps(2) infinite;
+	}
+
+	.cursor h3 {
+		display: flex;
+		align-items: center;
+		gap: 2px;
+	}
+
 	path {
 		stroke: none;
 		fill: #333;
 	}
-	/* Global styles specific to this page */
+
 	h1 {
 		display: flex;
 		font-size: 5em;
@@ -43,19 +93,6 @@
 		justify-content: center;
 	}
 
-	#main-content {
-		background-color: #333;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-around;
-		padding-top: 50px;
-	}
-
-	#profile-picture {
-		border-radius: 50%;
-	}
-
 	svg {
 		display: inline-block;
 		position: absolute;
@@ -70,8 +107,5 @@
 		padding-bottom: 100%;
 		vertical-align: middle;
 		overflow: hidden;
-	}
-
-	#intro-text {
 	}
 </style>
