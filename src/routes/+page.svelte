@@ -1,5 +1,5 @@
 <main>
-	<div id="main-content">
+	<div id="header">
 		<div id="intro-text">
 			<h2>Hey!</h2>
 			<h1>I'm Hugo Barroca</h1>
@@ -15,16 +15,27 @@
 	</div>
 	<div class="container">
 		<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-			<!-- xmlns="http://www.w3.org/2000/svg"
-            style="transform:translate(0, 0px); opacity:1"
-            fill="url(#sw-gradient-0)" -->
 			<path d="M0,0 C150,120 350,-30 500,20 L500,00 L0,0 Z"></path>
 		</svg>
+	</div>
+	<div id="main-content">
+		<h2>About me</h2>
+		<p>
+			I'm a software developer with a passion for technology and innovation. I'm always looking for new challenges and opportunities to learn and grow.
+		</p>
+		<h2>Skills</h2>
+		<ul>
+			<li>.NET</li>
+			<li>C#</li>
+			<li>JavaScript</li>
+			<li>React</li>
+
+		</ul>
 	</div>
 </main>
 
 <style>
-	#main-content {
+	#header {
 		background-color: #333;
 		display: flex;
 		flex-direction: row;
@@ -42,6 +53,8 @@
 
 	#profile-picture {
 		border-radius: 50%;
+		height: auto;
+		width:100%
 	}
 
 	.cursor {
@@ -61,7 +74,7 @@
 		height: 45px;
 		background: #f7f7f7;
 		display: inline-block;
-		animation: cursor-blink 1.5s steps(2) infinite;
+		animation: cursor-blink 2.5s steps(2) infinite;
 	}
 
 	.cursor h3 {
@@ -77,19 +90,20 @@
 
 	h1 {
 		display: flex;
-		font-size: 5em;
+		font-size: 5vw;
 		justify-content: center;
 	}
 
 	h2 {
 		display: flex;
-		font-size: 3em;
+		font-size: 4vw;
 		justify-content: center;
 	}
 
 	h3 {
+		text-wrap: nowrap;
 		display: flex;
-		font-size: 3em;
+		font-size: 3vw;
 		justify-content: center;
 	}
 
