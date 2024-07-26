@@ -1,8 +1,8 @@
 <main>
 	<div id="header">
 		<div id="intro-text" class="flex-center">
-			<h2>Hey!</h2>
-			<h2>I'm Hugo Barroca</h2>
+			<h2 id="greeting">Hey!</h2>
+			<h2 id="my-name-is">I'm Hugo Barroca</h2>
 			<div id="fake-code-container">
 				<span class="cursor">
 					<h3>&lt;Software Developer /&gt;</h3>
@@ -44,6 +44,17 @@
 		--cursor-blink-duration: 2.5s;
 	}
 
+	@keyframes reveal {
+		0% {
+			opacity: 0;
+			transform: translateY(10vh);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
 	#header {
 		background-color: var(--primary-bg-color);
 		display: flex;
@@ -58,11 +69,20 @@
 		padding: 5%;
 	}
 
+	#greeting {
+		animation: reveal .8s cubic-bezier(.215,.61,.355,1) .25s backwards;
+	}
+
+	#my-name-is {
+		animation: reveal 1.3s cubic-bezier(.215,.61,.355,1) .75s backwards;
+	}
+
 	#fake-code-container {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		height: 100%;
+		animation: reveal 1.3s cubic-bezier(.215,.61,.355,1) 1.25s backwards;
 	}
 
 	#profile-picture-wrapper {
