@@ -1,16 +1,16 @@
 <main>
 	<div id="header">
-		<div id="intro-text">
+		<div id="intro-text" class="flex-center">
 			<h2>Hey!</h2>
-			<h1>I'm Hugo Barroca</h1>
+			<h2>I'm Hugo Barroca</h2>
 			<div id="fake-code-container">
 				<span class="cursor">
 					<h3>&lt;Software Developer /&gt;</h3>
 				</span>
 			</div>
 		</div>
-		<div id="pf-section">
-			<img id="profile-picture" height="600vh" src="public/static/Me.jpeg" alt="Me" />
+		<div id="profile-picture-wrapper">
+			<img id="profile-picture" src="public/static/Me.jpeg" alt="Hugo Barroca" />
 		</div>
 	</div>
 	<div class="container">
@@ -18,10 +18,11 @@
 			<path d="M0,0 C150,120 350,-30 500,20 L500,00 L0,0 Z"></path>
 		</svg>
 	</div>
-	<div id="main-content">
+	<div id="main-content" class="general-container">
 		<h2>About me</h2>
 		<p>
-			I'm a software developer with a passion for technology and innovation. I'm always looking for new challenges and opportunities to learn and grow.
+			I'm a software developer with a passion for technology and innovation. I'm always looking for
+			new challenges and opportunities to learn and grow.
 		</p>
 		<h2>Skills</h2>
 		<ul>
@@ -29,19 +30,32 @@
 			<li>C#</li>
 			<li>JavaScript</li>
 			<li>React</li>
-
 		</ul>
 	</div>
 </main>
 
 <style>
+	:root {
+		--primary-bg-color: #333;
+		--text-color: #f7f7f7;
+		--font-size-h1: 5vw;
+		--font-size-h2: 4vw;
+		--font-size-h3: 3vw;
+		--cursor-blink-duration: 2.5s;
+	}
+
 	#header {
-		background-color: #333;
+		background-color: var(--primary-bg-color);
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-around;
-		padding-top: 50px;
+		padding-top: 5vh;
+	}
+
+	#intro-text {
+		text-align: center;
+		padding: 5%;
 	}
 
 	#fake-code-container {
@@ -51,60 +65,64 @@
 		height: 100%;
 	}
 
+	#profile-picture-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
 	#profile-picture {
+		border-style: solid;
+		border-color: darkkhaki;
 		border-radius: 50%;
+		width: 80%;
 		height: auto;
-		width:100%
 	}
 
 	.cursor {
-		padding: 0 50px 0 10px;
+		padding: 0;
 		border-radius: 10px;
 	}
 
 	@keyframes cursor-blink {
-		0% {
+		0%, 100% {
 			opacity: 0;
+		}
+		50% {
+			opacity: 1;
 		}
 	}
 
 	.cursor h3::after {
 		content: '';
-		width: 5px;
-		height: 45px;
-		background: #f7f7f7;
+		width: 0.1em;
+		height: 1em;
+		margin-left: 0.1em;
+		background: var(--text-color);
 		display: inline-block;
-		animation: cursor-blink 2.5s steps(2) infinite;
+		animation: cursor-blink var(--cursor-blink-duration) steps(1) infinite;
+		vertical-align: middle;
 	}
 
-	.cursor h3 {
+	.flex-center {
 		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		align-items: center;
-		gap: 2px;
 	}
 
 	path {
 		stroke: none;
-		fill: #333;
-	}
-
-	h1 {
-		display: flex;
-		font-size: 5vw;
-		justify-content: center;
+		fill: var(--primary-bg-color);
 	}
 
 	h2 {
-		display: flex;
-		font-size: 4vw;
-		justify-content: center;
+		font-size: var(--font-size-h2);
 	}
 
 	h3 {
-		text-wrap: nowrap;
-		display: flex;
-		font-size: 3vw;
-		justify-content: center;
+		white-space: nowrap;
+		font-size: var(--font-size-h3);
 	}
 
 	svg {
@@ -118,8 +136,17 @@
 		display: inline-block;
 		position: relative;
 		width: 100%;
-		padding-bottom: 100%;
+		padding-bottom: 10%;
 		vertical-align: middle;
 		overflow: hidden;
+	}
+
+	.general-container {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		padding: 10%;
+		font-size: var(--font-size-h2);
 	}
 </style>
