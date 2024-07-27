@@ -15,7 +15,7 @@
 	</div>
 	<div class="container">
 		<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-			<path d="M0,0 C150,120 350,-30 500,20 L500,00 L0,0 Z"></path>
+			<path id="wave" d="M0,0 C150,120 350,-30 500,20 L500,00 L0,0 Z"></path>
 		</svg>
 	</div>
 	<div id="main-content" class="general-container">
@@ -44,6 +44,22 @@
 		--cursor-blink-duration: 2.5s;
 	}
 
+	@keyframes wave {
+		0% {
+			d: path('M0,0 C150,120 350,-30 500,20 L500,00 L0,0 Z');
+		}
+		50% {
+			d: path('M0,0 C150,100 350,-50 500,30 L500,00 L0,0 Z');
+		}
+		100% {
+			d: path('M0,0 C150,120 350,-30 500,20 L500,00 L0,0 Z');
+		}
+	}
+
+	#wave {
+		animation: wave 5s infinite ease-in-out;
+	}
+
 	@keyframes reveal {
 		0% {
 			opacity: 0;
@@ -70,11 +86,11 @@
 	}
 
 	#greeting {
-		animation: reveal .8s cubic-bezier(.215,.61,.355,1) .25s backwards;
+		animation: reveal 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.25s backwards;
 	}
 
 	#my-name-is {
-		animation: reveal 1.3s cubic-bezier(.215,.61,.355,1) .75s backwards;
+		animation: reveal 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.75s backwards;
 	}
 
 	#fake-code-container {
@@ -82,7 +98,7 @@
 		align-items: center;
 		justify-content: center;
 		height: 100%;
-		animation: reveal 1.3s cubic-bezier(.215,.61,.355,1) 1.25s backwards;
+		animation: reveal 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) 1.25s backwards;
 	}
 
 	#profile-picture-wrapper {
@@ -105,7 +121,8 @@
 	}
 
 	@keyframes cursor-blink {
-		0%, 100% {
+		0%,
+		100% {
 			opacity: 0;
 		}
 		50% {
