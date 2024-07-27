@@ -2,16 +2,16 @@
 	<div id="header">
 		<div id="intro-text" class="flex-center">
 			<h2 id="greeting">Hey!</h2>
-			<h2 id="my-name-is">I'm Hugo Barroca</h2>
+			<h2 id="my-name-is">My name is Hugo Barroca</h2>
 			<div id="fake-code-container">
 				<span class="cursor">
-					<h3>&lt;Software Developer /&gt;</h3>
+					<h3>I am a &lt;Software Developer /&gt;</h3>
 				</span>
 			</div>
 		</div>
-		<div id="profile-picture-wrapper">
+		<!-- <div id="profile-picture-wrapper">
 			<img id="profile-picture" src="public/static/Me.jpeg" alt="Hugo Barroca" />
-		</div>
+		</div> -->
 	</div>
 	<div class="container">
 		<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
@@ -35,15 +35,6 @@
 </main>
 
 <style>
-	:root {
-		--primary-bg-color: #333;
-		--text-color: #f7f7f7;
-		--font-size-h1: 5vw;
-		--font-size-h2: 4vw;
-		--font-size-h3: 3vw;
-		--cursor-blink-duration: 2.5s;
-	}
-
 	@keyframes wave {
 		0% {
 			d: path('M0,0 C150,120 350,-30 500,20 L500,00 L0,0 Z');
@@ -77,7 +68,7 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-around;
-		padding-top: 5vh;
+		padding-top: 1vh;
 	}
 
 	#intro-text {
@@ -90,7 +81,7 @@
 	}
 
 	#my-name-is {
-		animation: reveal 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.75s backwards;
+		animation: reveal 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) 2.25s backwards;
 	}
 
 	#fake-code-container {
@@ -98,21 +89,7 @@
 		align-items: center;
 		justify-content: center;
 		height: 100%;
-		animation: reveal 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) 1.25s backwards;
-	}
-
-	#profile-picture-wrapper {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	#profile-picture {
-		border-style: solid;
-		border-color: darkkhaki;
-		border-radius: 50%;
-		width: 80%;
-		height: auto;
+		animation: reveal 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) 5.25s backwards;
 	}
 
 	.cursor {
@@ -154,6 +131,7 @@
 	}
 
 	h2 {
+		font-family: var(--font-family);
 		font-size: var(--font-size-h2);
 	}
 
