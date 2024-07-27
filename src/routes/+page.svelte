@@ -110,12 +110,12 @@
 	.cursor h3::after {
 		content: '';
 		width: 0.1em;
-		height: 1em;
+		height: 1.3em;
 		margin-left: 0.1em;
 		background: var(--text-color);
 		display: inline-block;
 		animation: cursor-blink var(--cursor-blink-duration) steps(1) infinite;
-		vertical-align: middle;
+		vertical-align: text-bottom;
 	}
 
 	.flex-center {
