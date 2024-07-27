@@ -137,6 +137,7 @@
 
 	h3 {
 		white-space: nowrap;
+		font-family: var(--font-family);
 		font-size: var(--font-size-h3);
 	}
 
