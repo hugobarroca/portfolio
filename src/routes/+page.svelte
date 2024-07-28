@@ -1,6 +1,6 @@
 <main>
-	<div id="header">
-		<div id="intro-text" class="flex-center">
+	<div class="header">
+		<div class="intro-text flex-center">
 			<h2 id="greeting">Hey!</h2>
 			<h2 id="my-name-is">My name is Hugo Barroca</h2>
 			<div id="fake-code-container">
@@ -19,18 +19,42 @@
 		</svg>
 	</div>
 	<div id="main-content" class="general-container">
-		<h2>About me</h2>
+		<h2>About me 👋</h2>
 		<p>
-			I'm a software developer with a passion for technology and innovation. I'm always looking for
-			new challenges and opportunities to learn and grow.
+			I'm a software developer with a passion for technology and innovation 🚀 I'm always looking
+			for new challenges and opportunities to learn and grow! 🌱
 		</p>
-		<h2>Skills</h2>
-		<ul>
-			<li>.NET</li>
-			<li>C#</li>
-			<li>JavaScript</li>
-			<li>React</li>
-		</ul>
+
+		<p>
+			I'm currently working as a backend dev at Create IT, providing services for a big portuguese
+			e-commerce company. 🚚
+		</p>
+		<p>
+			I've worked with plenty of technologies, but the bulk of my work has always been with C# and
+			Microsoft technologies, from .NET Core 3.5 onwards! I've developed multiple web applications,
+			APIs and services, and have been working with Azure services for the past year. 
+		</p>
+		<p>
+			I've also been learning a lot about Azure services 🌐, and am currently studying for my second
+			Azure certification (DevOps Expert).
+		</p>
+
+		<h2>My Projects 🎯</h2>
+		<p>
+			I'm currently working on a chrome extension to redirect you away from distracting sites! It's
+			a work in progress, so I'll get back to you soon. 🚧
+		</p>
+
+		<h2>My Hobbies 🌴</h2>
+		<p>
+			Other than programming, I enjoy bouldering in my free times 🧗‍♂️ I find the physical activity
+			challenging, and the routes themselves present interesting puzzles!
+		</p>
+
+		<p>
+			I also really like animals, both domestic, wild, and extinct! 🦖 I have a dog🐾 named Eddie,
+			and he's the cutest biggest thing!
+		</p>
 	</div>
 </main>
 
@@ -62,20 +86,6 @@
 		}
 	}
 
-	#header {
-		background-color: var(--primary-bg-color);
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-around;
-		padding-top: 1vh;
-	}
-
-	#intro-text {
-		text-align: center;
-		padding: 5%;
-	}
-
 	#greeting {
 		animation: reveal 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.25s backwards;
 	}
@@ -90,6 +100,22 @@
 		justify-content: center;
 		height: 100%;
 		animation: reveal 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) 5.25s backwards;
+	}
+
+	.header {
+		margin-top: -2vh;
+		background-color: var(--primary-bg-color);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+		padding-top: 1vh;
+	}
+
+	.intro-text {
+		text-align: center;
+		padding: 5%;
+		max-height: 10%;
 	}
 
 	.cursor {
@@ -164,5 +190,15 @@
 		justify-content: center;
 		padding: 10%;
 		font-size: var(--font-size-h2);
+	}
+
+	@media screen and (min-width: 850px) {
+		.header {
+			max-height: 400px;
+		}
+		h2,
+		h3 {
+			font-size: 46px;
+		}
 	}
 </style>

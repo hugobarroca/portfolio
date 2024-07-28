@@ -2,13 +2,13 @@
 	--primary-bg-color: #333;
 	--text-color: #f7f7f7;
 	--font-family: 'Mono', monospace;
-	--font-size-h2: 7vw;
-	--font-size-h3: 5vw;
+	--font-size-h2: 5.2vmin;
+	--font-size-h3: 4.2vmin;
 	--cursor-blink-duration: 1.5s;
 }
 
 html {
-	background-color: #608aa7;
+	background-color: #0074a9;
 	color: #ffffff;
 	font-family: sans-serif;
 }
@@ -16,4 +16,25 @@ html {
 body {
 	margin: 0;
 	padding: 0;
+}
+
+p, ul {
+	font-size: 4.5vmin;
+}
+
+h1, h2, h3 {
+	z-index: 1;
+}
+
+@media screen and (min-width: 850px) {
+	.header {
+		max-height: 400px;
+	}
+	h2, h3 {
+		font-size: 46px;
+	}
+
+	p, ul {
+		font-size: 30px;
+	}
 }
