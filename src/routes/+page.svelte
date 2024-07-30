@@ -32,7 +32,7 @@
 		<p>
 			I've worked with plenty of technologies, but the bulk of my work has always been with C# and
 			Microsoft technologies, from .NET Core 3.5 onwards! I've developed multiple web applications,
-			APIs and services, and have been working with Azure services for the past year. 
+			APIs and services, and have been working with Azure services for the past year.
 		</p>
 		<p>
 			I've also been learning a lot about Azure services 🌐, and am currently studying for my second
@@ -56,6 +56,12 @@
 			and he's the cutest biggest thing!
 		</p>
 	</div>
+	<footer class="footer">
+		<div class="github-link">
+			<img src="public/static/icons/github-mark.svg" alt="github logo" />
+			<a href="https://github.com/hugobarroca"><p>@hugobarroca</p></a>
+		</div>
+	</footer>
 </main>
 
 <style>
@@ -190,6 +196,36 @@
 		justify-content: center;
 		padding: 10%;
 		font-size: var(--font-size-h2);
+	}
+
+	.footer {
+		color: whitesmoke;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--primary-bg-color);
+		padding: 1vh;
+	}
+
+	.github-link {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		/* <!-- Strip style from links--> */
+		text-decoration: none;
+		color: whitesmoke;
+	}
+
+	.github-link a {
+		color: #a5a5a5;
+	}
+
+	.github-link img {
+		width: 50px;
+		height: auto;
+		padding-right: 15px;
 	}
 
 	@media screen and (min-width: 850px) {
