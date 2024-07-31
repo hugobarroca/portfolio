@@ -1,3 +1,7 @@
+<script>
+	import '../app.css';
+</script>
+
 <main>
 	<div class="header">
 		<div class="intro-text flex-center">
