@@ -7,9 +7,8 @@ export default defineConfig({
 		fs: {
 			allow: [
 				// search up for workspace root
-				searchForWorkspaceRoot(process.cwd()),
+				searchForWorkspaceRoot(process.cwd())
 				// your custom rules
-				'/public/*'
 			]
 		}
 	}

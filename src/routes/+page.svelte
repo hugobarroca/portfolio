@@ -1,29 +1,44 @@
-<script>
+<script lang="ts">
 	import '../app.css';
+	import { onMount } from 'svelte';
+	import githubLogo from '/static/icons/github-mark.svg';
+	import profilePhoto from '/static/Me.jpeg';
+
+	let starterContent: HTMLElement;
+	let starterContentRemovalTimer: number = 4500;
+
+	onMount(() => {
+		setTimeout(() => starterContent.remove(), starterContentRemovalTimer);
+	});
 </script>
 
 <main>
 	<div class="header">
 		<div class="intro-text flex-center">
-			<h2 id="greeting">Hey!</h2>
-			<h2 id="my-name-is">My name is Hugo Barroca</h2>
 			<div id="fake-code-container">
 				<span class="cursor">
 					<h3>I am a &lt;Software Developer /&gt;</h3>
 				</span>
 			</div>
 		</div>
-		<!-- <div id="profile-picture-wrapper">
-			<img id="profile-picture" src="public/static/Me.jpeg" alt="Hugo Barroca" />
-		</div> -->
 	</div>
 	<div class="container">
 		<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
 			<path id="wave" d="M0,0 C150,120 350,-30 500,20 L500,00 L0,0 Z"></path>
 		</svg>
 	</div>
-	<div id="main-content" class="general-container">
-		<h2>About me 👋</h2>
+	<div bind:this={starterContent} class="starter-content">
+		<h2 class="greeting">Hey!</h2>
+		<h2 class="my-name-is">My name is Hugo Barroca</h2>
+	</div>
+
+	<div class="general-container">
+		<div class="intro-and-photo">
+			<h2>About me 👋</h2>
+			<div class="profile-picture-wrapper">
+				<img class="profile-picture" src={profilePhoto} alt="Hugo Barroca" />
+			</div>
+		</div>
 		<p>
 			I'm a software developer with a passion for technology and innovation 🚀 I'm always looking
 			for new challenges and opportunities to learn and grow! 🌱
@@ -62,7 +77,7 @@
 	</div>
 	<footer class="footer">
 		<div class="github-link">
-			<img src="public/static/icons/github-mark.svg" alt="github logo" />
+			<img src={githubLogo} alt="github logo" />
 			<a href="https://github.com/hugobarroca"><p>@hugobarroca</p></a>
 		</div>
 	</footer>
@@ -81,10 +96,6 @@
 		}
 	}
 
-	#wave {
-		animation: wave 5s infinite ease-in-out;
-	}
-
 	@keyframes reveal {
 		0% {
 			opacity: 0;
@@ -96,12 +107,75 @@
 		}
 	}
 
-	#greeting {
-		animation: reveal 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.25s backwards;
+	@keyframes revealanddisappear {
+		0% {
+			opacity: 0;
+			transform: translateY(10vh);
+		}
+		50% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		100% {
+			opacity: 0;
+			transform: translateY(-10vh);
+		}
 	}
 
-	#my-name-is {
-		animation: reveal 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) 2.25s backwards;
+	@keyframes cursor-blink {
+		0%,
+		100% {
+			opacity: 0;
+		}
+		50% {
+			opacity: 1;
+		}
+	}
+
+	.intro-and-photo {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.profile-picture-wrapper {
+		display: flex;
+		align-items: right;
+		justify-content: right;
+		width: 50%;
+	}
+	.profile-picture {
+		border-style: solid;
+		border-color: darkkhaki;
+		border-radius: 50%;
+		width: 100%;
+		height: auto;
+	}
+
+	#wave {
+		animation: wave 5s infinite ease-in-out;
+	}
+
+	.starter-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 1vh;
+	}
+
+	.greeting {
+		animation: revealanddisappear 2.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.25s backwards;
+		font-size: 20vmin;
+		opacity: 0%;
+	}
+
+	.my-name-is {
+		margin: 10%;
+		animation: revealanddisappear 2.8s cubic-bezier(0.215, 0.61, 0.355, 1) 2.25s backwards;
+		opacity: 0%;
+		font-size: 10vmin;
 	}
 
 	#fake-code-container {
@@ -131,16 +205,6 @@
 	.cursor {
 		padding: 0;
 		border-radius: 10px;
-	}
-
-	@keyframes cursor-blink {
-		0%,
-		100% {
-			opacity: 0;
-		}
-		50% {
-			opacity: 1;
-		}
 	}
 
 	.cursor h3::after {
@@ -199,7 +263,9 @@
 		align-items: flex-start;
 		justify-content: center;
 		padding: 10%;
+		padding-top: 0%;
 		font-size: var(--font-size-h2);
+		animation: reveal 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) 5.25s backwards;
 	}
 
 	.footer {
