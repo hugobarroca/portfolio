@@ -40,39 +40,38 @@
 			</div>
 		</div>
 		<p>
-			I'm a software developer with a passion for technology and innovation 🚀 I'm always looking
+			I'm a software developer with a passion for technology and innovation 🚀. I'm always looking
 			for new challenges and opportunities to learn and grow! 🌱
 		</p>
 
 		<p>
-			I'm currently working as a backend dev at Create IT, providing services for a big portuguese
-			e-commerce company. 🚚
+			I'm currently working as a backend developer at Create IT, providing services for a major
+			Portuguese e-commerce company. 🚚
 		</p>
+
 		<p>
-			I've worked with plenty of technologies, but the bulk of my work has always been with C# and
-			Microsoft technologies, from .NET Core 3.5 onwards! I've developed multiple web applications,
-			APIs and services, and have been working with Azure services for the past year.
+			I've worked with a variety of technologies, but the bulk of my experience has been with C# and
+			Microsoft technologies, from .NET Core 3.5 to .NET 8. I've developed multiple web
+			applications, APIs, and services, and have been working with Azure services for the past year.
 		</p>
-		<p>
-			I've also been learning a lot about Azure services 🌐, and am currently studying for my second
-			Azure certification (DevOps Expert).
-		</p>
+
+		<p>I'm am currently studying for my second Azure certification, (DevOps Expert). 📖</p>
 
 		<h2>My Projects 🎯</h2>
 		<p>
-			I'm currently working on a chrome extension to redirect you away from distracting sites! It's
-			a work in progress, so I'll get back to you soon. 🚧
+			I'm currently working on a Chrome extension to help redirect you away from distracting sites!
+			It's a work in progress, so I'll update you soon. 🚧
 		</p>
 
 		<h2>My Hobbies 🌴</h2>
 		<p>
-			Other than programming, I enjoy bouldering in my free times 🧗‍♂️ I find the physical activity
+			Besides programming, I enjoy bouldering in my free time 🧗‍♂️. I find the physical activity
 			challenging, and the routes themselves present interesting puzzles!
 		</p>
 
 		<p>
-			I also really like animals, both domestic, wild, and extinct! 🦖 I have a dog🐾 named Eddie,
-			and he's the cutest biggest thing!
+			I also really like animals, both domestic and wild, as well as extinct ones! 🦖 I have a dog
+			🐾 named Eddie, and he's the cutest, biggest thing!
 		</p>
 	</div>
 	<footer class="footer">
