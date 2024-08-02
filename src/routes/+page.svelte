@@ -8,6 +8,11 @@
 	let starterContentRemovalTimer: number = 4500;
 
 	onMount(() => {
+		let greeting = Array.from(starterContent.children)[0];
+		let myName = Array.from(starterContent.children)[1];
+
+		setTimeout(() => greeting.remove(), 2200);
+		setTimeout(() => myName.remove(), starterContentRemovalTimer);
 		setTimeout(() => starterContent.remove(), starterContentRemovalTimer);
 	});
 </script>
