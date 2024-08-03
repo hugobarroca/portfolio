@@ -1,6 +1,10 @@
 :root {
-	--primary-bg-color: #333;
-	--text-color: #f7f7f7;
+	--primary-bg-color: #253c78;
+	--secondary-color: #2b59c3;
+	--primary-text-color: white;
+	--highlights-color: #253c78;
+	--links-color: #a5a5a5;
+
 	--font-family: 'Mono', monospace;
 	--font-size-h2: 5.2vmin;
 	--font-size-h3: 4.2vmin;
@@ -8,8 +12,8 @@
 }
 
 html {
-	background-color: #0074a9;
-	color: #ffffff;
+	background-color: var(--secondary-color);
+	color: var(--primary-text-color);
 	font-family: sans-serif;
 }
 
@@ -18,11 +22,14 @@ body {
 	padding: 0;
 }
 
-p, ul {
+p,
+ul {
 	font-size: 4.5vmin;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
 	z-index: 1;
 }
 
@@ -30,11 +37,13 @@ h1, h2, h3 {
 	.header {
 		max-height: 400px;
 	}
-	h2, h3 {
+	h2,
+	h3 {
 		font-size: 46px;
 	}
 
-	p, ul {
+	p,
+	ul {
 		font-size: 30px;
 	}
 }
