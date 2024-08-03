@@ -21,7 +21,7 @@
 <main>
 	<div class="header">
 		<div class="intro-text flex-center">
-			<div id="fake-code-container">
+			<div class="fake-code-container">
 				<span class="cursor">
 					<h3>I am a &lt;Software Developer /&gt;</h3>
 				</span>
@@ -30,7 +30,7 @@
 	</div>
 	<div class="container">
 		<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-			<path id="wave" d="M0,0 C150,120 350,-30 500,20 L500,00 L0,0 Z"></path>
+			<path class="wave" d="M0,0 C150,120 350,-30 500,20 L500,00 L0,0 Z"></path>
 		</svg>
 	</div>
 	<div bind:this={starterContent} class="starter-content">
@@ -95,11 +95,11 @@
 		</div>
 	</div>
 	<footer class="footer">
-		<div class="github-link">
+		<div class="footer-link">
 			<img class="footer-image" src={githubLogo} alt="github logo" />
 			<a href="https://github.com/hugobarroca"><p>@hugobarroca</p></a>
 		</div>
-		<div class="github-link">
+		<div class="footer-link">
 			<img src={xLogo} alt="X logo" />
 			<a href="https://x.com/TheCodeRex"><p>@TheCodeRex</p></a>
 		</div>
@@ -155,35 +155,58 @@
 		}
 	}
 
+	path {
+		fill: var(--primary-bg-color);
+		stroke: none;
+	}
+
+	h2 {
+		font-family: var(--font-family);
+		font-size: var(--font-size-h2);
+	}
+
+	h3 {
+		font-family: var(--font-family);
+		font-size: var(--font-size-h3);
+		white-space: nowrap;
+	}
+
+	svg {
+		display: inline-block;
+		left: 0;
+		position: absolute;
+		top: 0;
+	}
+
 	.intro-and-photo {
+		align-items: center;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		align-items: center;
 	}
 
 	.profile-picture-wrapper {
-		display: flex;
 		align-items: right;
+		display: flex;
 		justify-content: right;
 		width: 50%;
 	}
 	.profile-picture {
-		border-style: solid;
 		border-color: var(--highlights-color);
 		border-radius: 50%;
-		width: 100%;
+		border-style: solid;
 		height: auto;
+		width: 100%;
 	}
 
-	#wave {
+	.wave {
 		animation: wave 5s infinite ease-in-out;
 	}
 
 	.starter-content {
+		align-items: center;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		justify-content: center;
 		padding: 1vh;
 	}
@@ -195,18 +218,18 @@
 	}
 
 	.my-name-is {
-		margin: 10%;
 		animation: revealanddisappear 2.8s cubic-bezier(0.215, 0.61, 0.355, 1) 2.25s backwards;
-		opacity: 0%;
 		font-size: 10vmin;
+		margin: 10%;
+		opacity: 0%;
 	}
 
-	#fake-code-container {
-		display: flex;
+	.fake-code-container {
 		align-items: center;
-		justify-content: center;
-		height: 100%;
 		animation: reveal 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) 5.25s backwards;
+		display: flex;
+		height: 100%;
+		justify-content: center;
 	}
 
 	.header {
@@ -220,75 +243,52 @@
 	}
 
 	.intro-text {
-		text-align: center;
-		padding: 5%;
 		max-height: 10%;
+		padding: 5%;
+		text-align: center;
 	}
 
 	.cursor {
-		padding: 0;
 		border-radius: 10px;
+		padding: 0;
 	}
 
 	.cursor h3::after {
+		animation: cursor-blink var(--cursor-blink-duration) steps(1) infinite;
+		background: var(--text-color);
 		content: '';
-		width: 0.1em;
+		display: inline-block;
 		height: 1.3em;
 		margin-left: 0.1em;
-		background: var(--text-color);
-		display: inline-block;
-		animation: cursor-blink var(--cursor-blink-duration) steps(1) infinite;
 		vertical-align: text-bottom;
+		width: 0.1em;
 	}
 
 	.flex-center {
+		align-items: center;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		align-items: center;
-	}
-
-	path {
-		stroke: none;
-		fill: var(--primary-bg-color);
-	}
-
-	h2 {
-		font-family: var(--font-family);
-		font-size: var(--font-size-h2);
-	}
-
-	h3 {
-		white-space: nowrap;
-		font-family: var(--font-family);
-		font-size: var(--font-size-h3);
-	}
-
-	svg {
-		display: inline-block;
-		position: absolute;
-		top: 0;
-		left: 0;
 	}
 
 	.container {
 		display: inline-block;
-		position: relative;
-		width: 100%;
-		padding-bottom: 10%;
-		vertical-align: middle;
 		overflow: hidden;
+		padding-bottom: 10%;
+		position: relative;
+		vertical-align: middle;
+		width: 100%;
 	}
 
 	.general-container {
+		align-items: center;
+		animation: reveal 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) 5.25s backwards;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		padding: 10%;
-		padding-top: 0%;
 		font-size: var(--font-size-h2);
-		animation: reveal 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) 5.25s backwards;
+		justify-content: center;
+		padding-top: 0%;
+		padding: 10%;
 	}
 
 	.main-content {
@@ -305,25 +305,25 @@
 		padding: 1vh;
 	}
 
-	.github-link {
+	.footer-link {
+		align-items: center;
+		color: var(--links-color);
 		display: flex;
 		flex-direction: row;
-		align-items: center;
+		height: auto;
 		justify-content: center;
 		text-decoration: none;
 		width: 50%;
-		height: auto;
+	}
+
+	.footer-link a {
 		color: var(--links-color);
 	}
 
-	.github-link a {
-		color: var(--links-color);
-	}
-
-	.github-link img {
-		width: auto;
+	.footer-link img {
 		height: 30px;
 		padding-right: 15px;
+		width: auto;
 	}
 
 	@media screen and (min-width: 850px) {
