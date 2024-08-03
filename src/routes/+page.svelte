@@ -46,23 +46,34 @@
 				</div>
 			</div>
 			<p>
-				I'm a software developer with a passion for technology and innovation 🚀. I'm always looking
+				I'm a software developer with a passion for technology and innovation 🚀 I'm always looking
 				for new challenges and opportunities to learn and grow! 🌱
 			</p>
 
+			<h2>My Current Job 🏢</h2>
+
 			<p>
-				I'm currently working as a backend developer at Create IT, providing services for a major
-				Portuguese e-commerce company. 🚚
+				I've been working as a backend developer at Create IT since 2021, providing my services as a
+				fullstack software developer for a major Portuguese e-commerce company. 🚚
 			</p>
+
+			<h2>Teck Stack ⚙️</h2>
 
 			<p>
 				I've worked with a variety of technologies, but the bulk of my experience has been with C#
-				and Microsoft technologies, from .NET Core 3.5 to .NET 8. I've developed multiple web
-				applications, APIs, and services, and have been working with Azure services for the past
-				year.
+				and .NET, from .NET Core 3.5 to .NET 8. as well as FE frameworks such as React and Svelte.
+			</p>
+			<p>
+				I've developed multiple web applications, APIs, and services, all while working Azure
+				services. ☁️
 			</p>
 
-			<p>I'm am currently studying for my second Azure certification, (DevOps Expert). 📖</p>
+			<h2>Certifications 📃</h2>
+
+			<p>
+				I'm certified as an Azure Developer (AZ-204), and I'm am currently studying for my second
+				Azure certification, (DevOps Expert). 📖
+			</p>
 
 			<h2>My Projects 🎯</h2>
 			<p>
