@@ -154,7 +154,7 @@
 	}
 	.profile-picture {
 		border-style: solid;
-		border-color: darkkhaki;
+		border-color: var(--highlights-color);
 		border-radius: 50%;
 		width: 100%;
 		height: auto;
@@ -280,7 +280,7 @@
 	}
 
 	.footer {
-		color: whitesmoke;
+		color: var(--links-color);
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -296,11 +296,11 @@
 		justify-content: center;
 		/* <!-- Strip style from links--> */
 		text-decoration: none;
-		color: whitesmoke;
+		color: var(--links-color);
 	}
 
 	.github-link a {
-		color: #a5a5a5;
+		color: var(--links-color);
 	}
 
 	.github-link img {
