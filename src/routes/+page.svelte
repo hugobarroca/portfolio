@@ -2,6 +2,7 @@
 	import '../app.css';
 	import { onMount } from 'svelte';
 	import githubLogo from '/static/icons/github-mark.svg';
+	import xLogo from '/static/icons/x-logo.svg';
 	import profilePhoto from '/static/Me.jpeg';
 
 	let starterContent: HTMLElement;
@@ -95,8 +96,12 @@
 	</div>
 	<footer class="footer">
 		<div class="github-link">
-			<img src={githubLogo} alt="github logo" />
+			<img class="footer-image" src={githubLogo} alt="github logo" />
 			<a href="https://github.com/hugobarroca"><p>@hugobarroca</p></a>
+		</div>
+		<div class="github-link">
+			<img src={xLogo} alt="X logo" />
+			<a href="https://x.com/TheCodeRex"><p>@TheCodeRex</p></a>
 		</div>
 	</footer>
 </main>
@@ -291,12 +296,12 @@
 	}
 
 	.footer {
+		align-items: center;
+		background-color: var(--primary-bg-color);
 		color: var(--links-color);
 		display: flex;
 		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		background-color: var(--primary-bg-color);
+		justify-content: space-around;
 		padding: 1vh;
 	}
 
@@ -305,8 +310,9 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-		/* <!-- Strip style from links--> */
 		text-decoration: none;
+		width: 50%;
+		height: auto;
 		color: var(--links-color);
 	}
 
@@ -315,8 +321,8 @@
 	}
 
 	.github-link img {
-		width: 50px;
-		height: auto;
+		width: auto;
+		height: 30px;
 		padding-right: 15px;
 	}
 
