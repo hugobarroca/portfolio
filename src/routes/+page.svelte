@@ -287,8 +287,7 @@
 		flex-direction: column;
 		font-size: var(--font-size-h2);
 		justify-content: center;
-		padding-top: 0%;
-		padding: 10%;
+		padding: 0% 10% 10% 10%;
 	}
 
 	.main-content {
