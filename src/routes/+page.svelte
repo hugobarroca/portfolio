@@ -23,7 +23,7 @@
 		<div class="intro-text flex-center">
 			<div class="fake-code-container">
 				<span class="cursor">
-					<h3>I am a &lt;Software Developer /&gt;</h3>
+					<h3 class="secondary-header">I am a &lt;Software Developer /&gt;</h3>
 				</span>
 			</div>
 		</div>
@@ -42,6 +42,7 @@
 		<div class="main-content">
 			<div class="intro-and-photo">
 				<h2>About me 👋</h2>
+
 				<div class="profile-picture-wrapper">
 					<img class="profile-picture" src={profilePhoto} alt="Hugo Barroca" />
 				</div>
@@ -61,12 +62,13 @@
 			<h2>Teck Stack ⚙️</h2>
 
 			<p>
-				I've worked with a variety of technologies, but the bulk of my experience has been with C#
-				and .NET, from .NET Core 3.5 to .NET 8. as well as FE frameworks such as React and Svelte.
+				I've developed multiple web applications, APIs, and services, both on-prem and utilizing
+				Azure services. ☁️
 			</p>
+
 			<p>
-				I've developed multiple web applications, APIs, and services, all while working Azure
-				services. ☁️
+				I've worked with a variety of technologies, but the bulk of my experience has been with C#
+				and .NET, as well as FE frameworks such as React and Svelte. 🛠️
 			</p>
 
 			<h2>Certifications 📃</h2>
@@ -106,7 +108,7 @@
 	</footer>
 </main>
 
-<style>
+<style lang="scss">
 	@keyframes wave {
 		0% {
 			d: path('M0,0 C150,120 350,-30 500,20 L500,00 L0,0 Z');
@@ -178,18 +180,23 @@
 		top: 0;
 	}
 
+	.secondary-header {
+		color: var(--secondary-text-color);
+	}
+
 	.intro-and-photo {
 		align-items: center;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column-reverse;
 		justify-content: space-between;
 	}
 
 	.profile-picture-wrapper {
-		align-items: right;
 		display: flex;
 		justify-content: right;
-		width: 50%;
+		width: 40%;
+		min-width: 150px;
+		padding: 2%;
 	}
 	.profile-picture {
 		border-color: var(--highlights-color);
@@ -287,12 +294,16 @@
 		flex-direction: column;
 		font-size: var(--font-size-h2);
 		justify-content: center;
-		padding-top: 0%;
-		padding: 10%;
+		padding: 0% 10% 10% 10%;
 	}
 
 	.main-content {
 		max-width: 1050px;
+		display: flex;
+		flex-direction: column;
+		h2 {
+			align-self: center;
+		}
 	}
 
 	.footer {
