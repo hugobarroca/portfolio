@@ -262,7 +262,7 @@
 
 	.cursor h3::after {
 		animation: cursor-blink var(--cursor-blink-duration) steps(1) infinite;
-		background: var(--text-color);
+		background: var(--primary-text-color);
 		content: '';
 		display: inline-block;
 		height: 1.3em;

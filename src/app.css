@@ -1,10 +1,10 @@
 :root {
-	--primary-bg-color: #253c78;
-	--secondary-color: #2b59c3;
-	--primary-text-color: white;
-	--secondary-text-color: white;
-	--highlights-color: #253c78;
-	--links-color: #d3d0cb;
+	--primary-bg-color: #85a4f6;
+	--secondary-color: #b8ccfc;
+	--primary-text-color: #253c78;
+	--secondary-text-color: #253c78;
+	--highlights-color: #b8ccfc;
+	--links-color: #000000;
 
 	--font-family: 'Mono', monospace;
 	--font-size-h2: 5.2vmin;
