@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte';
 	import githubLogo from '/static/icons/github-mark.svg';
 	import xLogo from '/static/icons/x-logo.svg';
-	import profilePhoto from '/static/Me.jpeg';
+	import profilePhoto from '/static/Me.jpg';
 
 	let starterContent: HTMLElement;
 	let starterContentRemovalTimer: number = 4500;
