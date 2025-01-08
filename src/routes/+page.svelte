@@ -1,8 +1,8 @@
 <script lang="ts">
 	import '../app.css';
 	import { onMount } from 'svelte';
-	import githubLogo from '/static/icons/github-mark.svg';
-	import xLogo from '/static/icons/x-logo.svg';
+	import githubLogo from '/static/icons/github-mark-white.svg';
+	import xLogo from '/static/icons/x-logo-white.svg';
 	import profilePhoto from '/static/Me.jpg';
 
 	let starterContent: HTMLElement;
@@ -52,23 +52,18 @@
 				for new challenges and opportunities to learn and grow! 🌱
 			</p>
 
-			<h2>My Current Job 🏢</h2>
+			<h2>My Experience 🏢</h2>
 
 			<p>
-				I've been working as a backend developer at Create IT since 2021, providing my services as a
-				fullstack software developer for a major Portuguese e-commerce company. 🚚
-			</p>
-
-			<h2>Teck Stack ⚙️</h2>
-
-			<p>
-				I've developed multiple web applications, APIs, and services, both on-prem and utilizing
-				Azure services. ☁️
+				I've been working as a fullstack developer for the past 5 years, honing my C# and .NET
+				skills! I also ocasionally dabble in the Front End, prefering to to work with TypeScript and
+				either ReactJS or Svelte.
 			</p>
 
 			<p>
-				I've worked with a variety of technologies, but the bulk of my experience has been with C#
-				and .NET, as well as FE frameworks such as React and Svelte. 🛠️
+				During this time, I've developed and mantained Web APIs which have served millions of
+				requests, authentication servers with OAuth and OpenID, I've deployed services in both Azure
+				and On-Prem, and worked with databases with many many of rows of data!
 			</p>
 
 			<h2>Certifications 📃</h2>
@@ -319,6 +314,7 @@
 	.footer-link {
 		align-items: center;
 		color: var(--links-color);
+		background-color: var(--secondary-bg-color);
 		display: flex;
 		flex-direction: row;
 		height: auto;
