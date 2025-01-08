@@ -1,10 +1,10 @@
 :root {
-	--primary-bg-color: #85a4f6;
-	--secondary-color: #b8ccfc;
-	--primary-text-color: #253c78;
-	--secondary-text-color: #253c78;
-	--highlights-color: #b8ccfc;
-	--links-color: #000000;
+	--primary-bg-color: #021526;
+	--secondary-color: #03346E;
+	--primary-text-color: #FFFFFF;
+	--secondary-text-color: #FFFFFF;
+	--highlights-color: #E2E2B6;
+	--links-color: #6EACDA;
 
 	--font-family: 'Mono', monospace;
 	--font-size-h2: 5.2vmin;
@@ -38,6 +38,7 @@ h3 {
 	.header {
 		max-height: 400px;
 	}
+
 	h2,
 	h3 {
 		font-size: 46px;
